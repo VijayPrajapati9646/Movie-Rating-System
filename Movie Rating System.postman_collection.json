@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "ed25cbbf-e27b-499c-a923-9858bd54e55b",
+		"name": "Movie Rating System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Movies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"limit\" : 2,\r\n\t\"skip\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movie/list-movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"list-movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Movies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"movie_name\": \"fourth Movie\",\r\n\t\"description\": \"This Is First Movie\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movie/post-movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"post-movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rate Movies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"movie_id\" : \"6140867432fa2effbe176a70\",\r\n\t\"email\" : \"first3@test.com\",\r\n\t\"rating\" : 2,\r\n\t\"comment\" : \"this is first comment\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movie/rate-movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"rate-movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Average And Total Ratings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movie/total-and-average-ratings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"total-and-average-ratings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Comments And Ratings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"movie_id\" : \"614078a78ae984a13f9d82d7\",\r\n\t\"limit\" : 2,\r\n\t\"skip\" : 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movie/list-comments-ratings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movie",
+						"list-comments-ratings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
